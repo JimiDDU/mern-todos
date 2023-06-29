@@ -10,7 +10,7 @@ function InputTodos({ setTodo, todo }) {
     setLoading(true);
     if (name.trim().length) {
       const response = await axios.post(
-        "https://todo-backend-mu-ivory.vercel.app/addNew",
+        "https://mern-todos-backend.vercel.app/addNew",
         {
           name,
         }
