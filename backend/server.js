@@ -7,7 +7,7 @@ const Todo = require("./models/todos");
 const server = express();
 server.use(express.json());
 server.use(cors({
-  origin:["https://mern-todos-gilt.vercel.app/"],
+  origin:["https://mern-todos-gilt.vercel.app"],
   methods:["GET", "POST", "PUT", "DELETE"],
   credentials:true
 }));
