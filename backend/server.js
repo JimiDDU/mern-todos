@@ -12,7 +12,7 @@ server.use(cors({
   credentials:true
 }));
 
-mongoose.connect(process.env.URL).then((data) => {
+mongoose.connect("mongodb+srv://pateljimi2020:pateljimi2020@cluster0.yhvpu71.mongodb.net/?retryWrites=true&w=majority").then((data) => {
   console.log("connected to database");
 });
 
