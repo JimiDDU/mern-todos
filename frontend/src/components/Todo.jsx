@@ -13,7 +13,7 @@ function Todo({ name, id, done, setTodo, todo }) {
   };
   const edit = async () => {
     const res = await axios.put(
-      "https://todo-backend-mu-ivory.vercel.app/todo",
+      "https://mern-todos-backend.vercel.app/todo",
       [id, { name: newName }]
     );
     setEditing(false);
@@ -22,7 +22,7 @@ function Todo({ name, id, done, setTodo, todo }) {
 
   const handleDelete = async () => {
     const res = await axios.delete(
-      `https://todo-backend-mu-ivory.vercel.app/${id}`
+      `https://mern-todos-backend.vercel.app/${id}`
     );
     if (res.data._id) {
       const temp = todo.filter((item) => item._id !== id);
@@ -32,7 +32,7 @@ function Todo({ name, id, done, setTodo, todo }) {
 
   const handleDone = async () => {
     const res = await axios.put(
-      "https://todo-backend-mu-ivory.vercel.app/todo",
+      "https://mern-todos-backend.vercel.app/todo",
       [id, { done: !mydone }]
     );
     setMyDone(!mydone);
