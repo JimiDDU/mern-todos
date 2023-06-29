@@ -23,6 +23,10 @@ server.post("/addNew", async (req, res) => {
   res.send(todo);
 });
 
+server.get('/', async (req, res)=>{
+  res.send("<h1>Hello world</h1>")
+})
+
 server.get("/todos", async (req, res) => {
   const todos = await Todo.find().sort({ time: -1 });
   // res.send(todos);
