@@ -21,7 +21,8 @@ server.post("/addNew", async (req, res) => {
 
 server.get("/todos", async (req, res) => {
   const todos = await Todo.find().sort({ time: -1 });
-  res.send(todos);
+  // res.send(todos);
+  res.json(todos)
 });
 
 server.put("/todo", async (req, res) => {
