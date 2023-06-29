@@ -10,7 +10,7 @@ function App() {
 
   const getTodos = async () => {
     const res = await axios.get(
-      "https://todo-backend-mu-ivory.vercel.app/todos"
+      "https://mern-todos-backend.vercel.app/todos"
     );
     setTodos(res.data);
   };
